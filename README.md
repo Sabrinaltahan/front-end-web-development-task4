@@ -25,3 +25,7 @@ Loading Animations - Use animations to create loading effects when the page load
 Animated Navigation Menu - Make the navigation menu bigger or smaller depending on whether the user has scrolled or not.
 Text effects - Use effects such as text shadow, text rotation or changes in font size.
 Image rotation and zoom - Use "transform" to create rotating and zooming effects for images.
+
+
+
+npx sass styles.scss styles.css

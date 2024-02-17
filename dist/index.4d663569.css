@@ -172,4 +172,47 @@ body {
   color: var(--text-color);
 }
 
+@keyframes colorTransition {
+  0% {
+    background-color: #3498db;
+  }
+
+  100% {
+    background-color: #2ecc71;
+  }
+}
+
+.shadow-effect p {
+  text-shadow: 2px 2px 5px #00000080;
+}
+
+.color-transition .color-box {
+  background: linear-gradient(to right, #3498db, #2ecc71);
+  width: 100px;
+  height: 100px;
+  animation: 5s infinite alternate colorTransition;
+}
+
+.button-animation .reserve-button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: background-color .3s;
+}
+
+.button-animation .reserve-button:hover {
+  background-color: #2980b9;
+}
+
+.image-animation .animated-image {
+  transition: transform .5s;
+}
+
+.image-animation .animated-image:hover {
+  transform: rotate(360deg)scale(1.2);
+}
+
 /*# sourceMappingURL=index.4d663569.css.map */

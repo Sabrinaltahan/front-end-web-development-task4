@@ -136,6 +136,100 @@ footer {
   text-align: center;
 }
 
+.shadow-effect, .background-animation {
+  text-align: center;
+}
+
+.image-animation .animated-image {
+  width: 100px;
+  border-radius: 60%;
+  transition: transform 0.5s ease;
+}
+.image-animation .animated-image:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+.background-animation .container {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.membership-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.membership-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.membership-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.membership-form input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.membership-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  transition: width 0.3s ease;
+}
+.membership-form button:hover {
+  background-color: #000;
+  width: 150px;
+}
+
+.parallax-section {
+  height: 400px;
+  background-image: url("img/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  position: relative;
+}
+.parallax-section .parallax-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+.parallax-section .parallax-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
 :root {
   --background-color: #ecf0f1;
   --text-color: #2c3e50;
@@ -149,6 +243,59 @@ footer {
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+}
+
+@keyframes shadowAnimation {
+  0% {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+  }
+  100% {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+}
+.animated-text {
+  animation: shadowAnimation 3s infinite;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-color: #3498db;
+  }
+  50% {
+    background-color: #2ecc71;
+  }
+  100% {
+    background-color: #3498db;
+  }
+}
+.background-animation {
+  animation: backgroundAnimation 5s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes labelAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.membership-form label {
+  animation: labelAnimation 3s infinite alternate;
 }
 
 /*# sourceMappingURL=styles.css.map */
